@@ -1,0 +1,52 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.slider .indicators .indicator-item.active {
+  background-color: #1565c0;
+}
+
+.carousel.carousel-slider .carousel-item p {
+  font-size: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.caption {
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+.letra
+{
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.slogan{
+  font-size: 30px;
+}
+.colorp {
+  background-color: #82c2cc !important;
+  /*
+  88c8d2
+  82c2cc
+  */
+}
+
+h3{
+  color: #000000
+}
+
+.logo_sodeca {
+  width: 350px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
