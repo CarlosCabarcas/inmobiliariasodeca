@@ -75,14 +75,16 @@
           </div>
           <a href="#" class="prev"></a><a href="#" class="next"></a>
       </div>
-      <nav>
-          <ul class="menu">
-              <li class="current"><a href="/">Inicio</a></li>
-              <li><a href="/nosotros">Nosotros</a></li>
-              <li><a href="#">Proyectos</a></li>
-              <li><a href="#">Contacto</a></li>
-          </ul>
-      </nav>
+        <nav>
+          <div class="nav-wrapper">
+            <ul id="nav-mobile" class="menu left hide-on-med-and-down">
+                <li class="@yield('activeinicio')"><a href="/">Inicio</a></li>
+                <li class="@yield('activenosotros')"><a href="/nosotros">Nosotros</a></li>
+                <li class=""><a href="#">Proyectos</a></li>
+                <li class=""><a href="#">Contacto</a></li>
+            </ul>
+          </div>
+        </nav>
   </div>
 </header>
 

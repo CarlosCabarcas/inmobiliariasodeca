@@ -79,3 +79,7 @@
     </div>
 </section>
 @stop
+
+@section('activeinicio')
+ current
+@stop

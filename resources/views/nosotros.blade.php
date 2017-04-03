@@ -3,7 +3,7 @@
 @section('content')
 
 <section class="container">
-    <h2 class="top-1 p3">Sobre Nosotros</h2>
+    <h2 class="top-1 p3"><strong>Sobre Nosotros</strong></h2>
     <div>
 
       <div>
@@ -33,4 +33,8 @@
     </p>
   </section>
 
+@stop
+
+@section('activenosotros')
+  current
 @stop
