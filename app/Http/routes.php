@@ -19,3 +19,8 @@ Route::get('/nosotros',function ()
 {
   return view('nosotros');
 });
+
+Route::get('/inicio_admin',function ()
+{
+  return view('inicio_admin');
+});
