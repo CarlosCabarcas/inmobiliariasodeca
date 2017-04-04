@@ -13,16 +13,19 @@
     <div class="col-md-6">
       <div class="form-group">
         <label for="nombre">Nombre del proyecto</label>
-        <input type="text" class="form-control" name="nombre" placeholder="Nombre del producto">
+        <input type="text" class="form-control" name="nombre" placeholder="Nombre del proyecto">
       </div>
       <div class="form-group">
         <label for="descripcion">Descripción</label>
-        <textarea rows="3" class="form-control"  name="descripcion" placeholder="Descripción del producto"></textarea>
+        <textarea rows="3" class="form-control"  name="descripcion" placeholder="Descripción del proyecto"></textarea>
       </div>
 
       <div class="form-group">
-        <label for="imagen">Imagen</label>
-        <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any" name="imagen">
+        <label for="imagen">Imagenes</label>
+        <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any" name="imagen1">
+        <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any" name="imagen2">
+        <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any" name="imagen3">
+        <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any" name="imagen4">
       </div>
 
       <div class="col-md-6 ">
@@ -33,8 +36,12 @@
       <div class="form-group">
         <label for="categoria">Tipo de Inmueble</label>
         <select class="form-control" name="categoria">
-          <option value="casa">casa</option>
-          <option value="apartamento">apartamento</option>
+          <option value="">Seleccione un tipo de inmueble</option>
+          <option value="Casa">Casa</option>
+          <option value="Apartamento">Apartamento</option>
+          <option value="Casa finca">Casa finca</option>
+          <option value="Finca">Finca</option>
+          <option value="Oficina">Oficina</option>
         </select>
       </div>
       <div class="form-group">

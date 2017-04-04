@@ -53,7 +53,22 @@ class ProyectosController extends Controller
       $proyecto->save();
 
       //foreach ($datos as $data) {
-        $this->guardarImagen($request, $proyecto->id);
+      if($request->file('imagen1')){
+        $imagen = 'imagen1';
+        $this->guardarImagen($request, $proyecto->id, $imagen);
+      }
+      if($request->file('imagen2')){
+        $imagen = 'imagen2';
+        $this->guardarImagen($request, $proyecto->id, $imagen);
+      }
+      if($request->file('imagen3')){
+        $imagen = 'imagen3';
+        $this->guardarImagen($request, $proyecto->id, $imagen);
+      }
+      if($request->file('imagen4')){
+        $imagen = 'imagen4';
+        $this->guardarImagen($request, $proyecto->id, $imagen);
+      }
       //}
 
       return redirect()->route('create_proyecto');
@@ -61,20 +76,20 @@ class ProyectosController extends Controller
       //return back();
     }
 
-    public function guardarImagen($request, $id){
-      $proyect = new Imagen();
+    public function guardarImagen($request, $id, $imagen){
+      $image = new Imagen();
 
-      $proyect->proyectoFk = $id;
+      $image->proyectoFk = $id;
 
-      $img = $request->file('imagen');
+      $img = $request->file($imagen);
       $file_rout = time().'_'.$img->getClientOriginalName(); //metodo time() guarda la hora de unix
 
       storage::disk('imgProyectos')->put($file_rout, file_get_contents($img->getRealPath()));
-      $proyect->ruta = $file_rout;//ruta nombre de campo en bd
+      $image->ruta = $file_rout;//ruta nombre de campo en bd
 
 
 
-      $proyect->save();
+      $image->save();
     }
 
     /**
