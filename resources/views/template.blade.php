@@ -79,16 +79,16 @@
           </div>
           <a href="#" class="prev"></a><a href="#" class="next"></a>
       </div>
-        <nav>
-          <div class="nav-wrapper">
-            <ul id="nav-mobile" class="menu left hide-on-med-and-down">
-                <li class="@yield('activeinicio')"><a href="/">Inicio</a></li>
-                <li class="@yield('activenosotros')"><a href="/nosotros">Nosotros</a></li>
-                <li class="@yield('activeproyectos')"><a href="/proyectos">Proyectos</a></li>
-                <li class="@yield('activecontacto')"><a href="/contacto">Contacto</a></li>
-            </ul>
-          </div>
-        </nav>
+      <nav>
+            <div class="nav-wrapper">
+              <ul id="nav-mobile" class="menu">
+                  <li class="@yield('activeinicio')"><a href="/">Inicio</a></li>
+                  <li class="@yield('activenosotros')"><a href="/nosotros">Nosotros</a></li>
+                  <li class="@yield('activeproyectos')"><a href="/proyectos">Proyectos</a></li>
+                  <li class="@yield('activecontacto')"><a href="/contacto">Contacto</a></li>
+              </ul>
+            </div>
+      </nav>
   </div>
 </header>
 

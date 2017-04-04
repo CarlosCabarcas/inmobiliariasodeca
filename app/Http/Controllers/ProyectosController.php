@@ -36,6 +36,11 @@ class ProyectosController extends Controller
         //
     }
 
+    public function mostrar()
+    {
+      $proyectos = ProyectoInmobiliario::all();
+      return view('proyectos') -> with(['proyectos' => $proyectos]);
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -47,7 +52,7 @@ class ProyectosController extends Controller
       $datos = array(
         'nombreProyecto' => $request->nombre,
         'tipoInmueble' => $request->categoria,
-        'descripcion' => $request->descripcion
+        'descripcion' => nl2br($request->descripcion)
       );
       $proyecto = new ProyectoInmobiliario($datos);
       $proyecto->save();

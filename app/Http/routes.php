@@ -24,6 +24,14 @@ Route::get('/inicio_admin',function ()
 {
   return view('inicio_admin');
 });
+
+Route::get('/proyectos', 'ProyectosController@mostrar');
+
+Route::get('/contacto', function ()
+{
+  return view('contacto');
+});
+
 //**********************************
 Route::get('/crear_proyecto', ['as' => 'create_proyecto', 'uses' => 'ProyectosController@index']);
 
