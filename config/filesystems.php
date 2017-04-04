@@ -42,6 +42,11 @@ return [
     */
 
     'disks' => [
+//creo un disco publico para almacenar las imagenes
+        'imgProyectos' => [
+            'driver' => 'local',
+            'root'   => public_path('imgProyectos'),
+        ],
 
         'local' => [
             'driver' => 'local',

@@ -20,22 +20,11 @@ Route::get('/nosotros',function ()
   return view('nosotros');
 });
 
-Route::get('/proyectos',function ()
-{
-  return view('proyectos');
-});
-
-Route::get('/contacto',function ()
-{
-  return view('contacto');
-});
-
 Route::get('/inicio_admin',function ()
 {
   return view('inicio_admin');
 });
+//**********************************
+Route::get('/crear_proyecto', ['as' => 'create_proyecto', 'uses' => 'ProyectosController@index']);
 
-Route::get('/crear_proyecto',function ()
-{
-  return view('crear_proyecto');
-});
+Route::post('/guardar_proyecto', ['as' => 'save_proyecto', 'uses' => 'ProyectosController@store']);

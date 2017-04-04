@@ -42,8 +42,8 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Inicio <span class="sr-only">(current)</span></a></li>
-            <li><a href="#"> <i class="fa fa-shopping-bag" aria-hidden="true"></i> Agregar proyecto </a></li>
+            <li class="active"><a href="/inicio_admin"><i class="fa fa-home" aria-hidden="true"></i> Inicio <span class="sr-only">(current)</span></a></li>
+            <li><a href="/crear_proyecto"> <i class="fa fa-shopping-bag" aria-hidden="true"></i> Agregar proyecto </a></li>
           </ul>
         </div>
 

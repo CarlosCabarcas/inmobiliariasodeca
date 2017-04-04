@@ -8,7 +8,7 @@
 
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
   <h1 class="page-header">Inmobiliaria Sodeca <small>AGREGAR PROYECTO</small></h1>
-  <form class="" action="" method="POST" enctype="multipart/form-data">
+  <form class="" action="{{route('save_proyecto')}}" method="POST" enctype="multipart/form-data">
   {!! csrf_field() !!}
     <div class="col-md-6">
       <div class="form-group">
@@ -22,7 +22,7 @@
 
       <div class="form-group">
         <label for="imagen">Imagen</label>
-        <input type="text" class="form-control" name="imagen" placeholder="inserte URL de la imagen">
+        <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any" name="imagen">
       </div>
 
       <div class="col-md-6 ">
@@ -33,13 +33,13 @@
       <div class="form-group">
         <label for="categoria">Tipo de Inmueble</label>
         <select class="form-control" name="categoria">
-          <option value=""></option>
-          <option value=""></option>
+          <option value="casa">casa</option>
+          <option value="apartamento">apartamento</option>
         </select>
       </div>
       <div class="form-group">
-        <label for="imagen">Ubicación</label>
-        <input type="text" class="form-control" name="imagen" placeholder="inserte URL de la imagen">
+        <label for="ubicacion">Ubicación</label>
+        <input type="text" class="form-control" name="" placeholder="">
       </div>
     </div>
 

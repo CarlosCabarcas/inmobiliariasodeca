@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use Storage;
+
+use App\ProyectoInmobiliario;
+
+use App\Imagen;
+
+
 class ProyectosController extends Controller
 {
     /**
@@ -16,7 +23,7 @@ class ProyectosController extends Controller
      */
     public function index()
     {
-        //
+        return view('crear_proyecto');
     }
 
     /**
@@ -37,7 +44,37 @@ class ProyectosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $datos = array(
+        'nombreProyecto' => $request->nombre,
+        'tipoInmueble' => $request->categoria,
+        'descripcion' => $request->descripcion
+      );
+      $proyecto = new ProyectoInmobiliario($datos);
+      $proyecto->save();
+
+      //foreach ($datos as $data) {
+        $this->guardarImagen($request, $proyecto->id);
+      //}
+
+      return redirect()->route('create_proyecto');
+      //o
+      //return back();
+    }
+
+    public function guardarImagen($request, $id){
+      $proyect = new Imagen();
+
+      $proyect->proyectoFk = $id;
+
+      $img = $request->file('imagen');
+      $file_rout = time().'_'.$img->getClientOriginalName(); //metodo time() guarda la hora de unix
+
+      storage::disk('imgProyectos')->put($file_rout, file_get_contents($img->getRealPath()));
+      $proyect->ruta = $file_rout;//ruta nombre de campo en bd
+
+
+
+      $proyect->save();
     }
 
     /**
