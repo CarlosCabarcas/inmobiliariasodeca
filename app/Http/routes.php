@@ -24,3 +24,8 @@ Route::get('/inicio_admin',function ()
 {
   return view('inicio_admin');
 });
+
+Route::get('/crear_proyecto',function ()
+{
+  return view('crear_proyecto');
+});

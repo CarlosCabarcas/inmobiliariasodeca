@@ -7,13 +7,12 @@
 @section('content')
 
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-  <h1 class="page-header">BiciUnicor <small>CREAR PRODUCTO</small></h1>
-@include('partials.errors')
-  <form class="" action="{{route('formulario')}}" method="POST" enctype="multipart/form-data">
+  <h1 class="page-header">Inmobiliaria Sodeca <small>AGREGAR PROYECTO</small></h1>
+  <form class="" action="" method="POST" enctype="multipart/form-data">
   {!! csrf_field() !!}
     <div class="col-md-6">
       <div class="form-group">
-        <label for="nombre">Nombre producto</label>
+        <label for="nombre">Nombre del proyecto</label>
         <input type="text" class="form-control" name="nombre" placeholder="Nombre del producto">
       </div>
       <div class="form-group">
@@ -32,20 +31,15 @@
     </div>
     <div class="col-md-6">
       <div class="form-group">
-        <label for="extract">Pequeña descripcion</label>
-        <input type="text" class="form-control" name="extract" placeholder="Pequeña descripción">
-      </div>
-      <div class="form-group">
-        <label for="precio">Precio</label>
-        <input type="text" class="form-control" name="precio" placeholder="Precio del producto">
-      </div>
-      <div class="form-group">
-        <label for="categoria">Categoria</label>
+        <label for="categoria">Tipo de Inmueble</label>
         <select class="form-control" name="categoria">
-        @foreach ($categorias as $cat)
           <option value=""></option>
-        @endforeach
+          <option value=""></option>
         </select>
+      </div>
+      <div class="form-group">
+        <label for="imagen">Ubicación</label>
+        <input type="text" class="form-control" name="imagen" placeholder="inserte URL de la imagen">
       </div>
     </div>
 
