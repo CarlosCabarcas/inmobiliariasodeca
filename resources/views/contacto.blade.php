@@ -3,7 +3,7 @@
 @section('content')
 <section class="container">
 		<div class="row">
-		<h3 class="center-align">CONTACTO</h3>
+		<h2 class="center-align">Contactanos</h2>
 			<article class="col s6 offset-s3">
 				<form method="POST" action="formulario-contacto.php">
 					<div class="input-field">
@@ -13,8 +13,8 @@
 					</div>
 
 					<div class="input-field">
-						<i class="material-icons prefix">person_pin</i>
-						<label for="apellido">Apellido</label>
+						<i class="material-icons prefix">mode_edit</i>
+						<label for="apellido">Asunto</label>
 						<input type="text" name="apellido" required>
 					</div>
 
@@ -23,12 +23,6 @@
 						<label for="email">Email</label>
 						<input type="email" name="email" required>
 					</div>
-
-          <div class="input-field">
-            <i class="material-icons prefix">mod_edit</i>
-            <label for="asunto">Asunto</label>
-            <input type="text" name="asunto" required>
-          </div>
 
 					<div class="input-field">
 						<i class="material-icons prefix">message</i>

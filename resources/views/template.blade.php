@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="{{asset('css/slider.css')}}">
     <link rel="stylesheet" type="text/css" media="screen" href="{{asset('css/jqtransform.css')}}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
     <script src="{{asset('js/jquery-1.7.min.js')}}"></script>
     <script src="{{asset('js/jquery.easing.1.3.js')}}"></script>
     <script src="{{asset('js/cufon-yui.js')}}"></script>
@@ -18,6 +19,8 @@
     <script src="{{asset('js/tms-0.4.x.js')}}"></script>
     <script src="{{asset('js/jquery.jqtransform.js')}}"></script>
     <script src="{{asset('js/FF-cash.js')}}"></script>
+    <!--<script src="{{asset('js/jquery-2.1.4.min.js')}}"></script>-->
+    <script src="{{asset('js/materialize.min.js')}}"></script>
     <link href="{{asset('css/materialize.min.css')}}" type="text/css" rel="stylesheet"/>
     <!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
     <link href="{{asset('css/style2.css')}}" type="text/css" rel="stylesheet"/>

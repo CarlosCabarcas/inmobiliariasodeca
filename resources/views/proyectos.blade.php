@@ -3,7 +3,7 @@
 @section('content')
 
 <main class="container">
-    <h3 class="blue-text text-darken-3">Nuestros Proyectos</h3>
+    <h2 class="">Nuestros Proyectos</h2>
 
     <div class="row">
       <div class="col s12 m4">
