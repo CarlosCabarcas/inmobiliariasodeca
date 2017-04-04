@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="{{asset('css/grid_12.css')}}">
     <link rel="stylesheet" type="text/css" media="screen" href="{{asset('css/slider.css')}}">
     <link rel="stylesheet" type="text/css" media="screen" href="{{asset('css/jqtransform.css')}}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="{{asset('js/jquery-1.7.min.js')}}"></script>
     <script src="{{asset('js/jquery.easing.1.3.js')}}"></script>
     <script src="{{asset('js/cufon-yui.js')}}"></script>
@@ -80,8 +81,8 @@
             <ul id="nav-mobile" class="menu left hide-on-med-and-down">
                 <li class="@yield('activeinicio')"><a href="/">Inicio</a></li>
                 <li class="@yield('activenosotros')"><a href="/nosotros">Nosotros</a></li>
-                <li class=""><a href="#">Proyectos</a></li>
-                <li class=""><a href="#">Contacto</a></li>
+                <li class="@yield('activeproyectos')"><a href="/proyectos">Proyectos</a></li>
+                <li class="@yield('activecontacto')"><a href="/contacto">Contacto</a></li>
             </ul>
           </div>
         </nav>
@@ -92,19 +93,19 @@
 
 </div>
 <!--==============================footer=================================-->
-<footer class="page-footer colorp">
+<footer class="">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">SODECA UNIÓN LTDA</h5>
+          <h5 class="p3">SODECA UNIÓN LTDA</h5>
           <ul>
-            <li><a href="sobre-nosotros.html" class="grey-text text-lighten-4">Nosotros</a></li>
-            <li><a href="contacto.html" class="grey-text text-lighten-4">Contacto</a></li>
-            <li><a href="proyectos.html" class="grey-text text-lighten-4">Proyectos</a></li>
+            <li><a href="/nosotros" class="p3">Nosotros</a></li>
+            <li><a href="/contacto" class="p3">Contacto</a></li>
+            <li><a href="/proyectos" class="p3">Proyectos</a></li>
           </ul>
         </div>
         <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Nuestras Redes</h5>
+          <h5 class="p3">Nuestras Redes</h5>
           <ul>
             <li><a href="https://www.facebook.com/Sodeca-Uni%C3%B3n-Ltda-1789881614665523/?fref=ts" target="_blank"><img alt="Siguenos en Facebook" src="{{asset('images/fac.png')}}" width=48 height=48  /></a></li>
             <!--<li><a href="http://twitter.com/AQUI_TU_USUARIO" target="_blank"><img src="{{asset('images/twi.png')}}" width=48 height=48 alt="Síguenos en Twitter" /></a></li>-->

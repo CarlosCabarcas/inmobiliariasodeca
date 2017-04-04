@@ -20,6 +20,16 @@ Route::get('/nosotros',function ()
   return view('nosotros');
 });
 
+Route::get('/proyectos',function ()
+{
+  return view('proyectos');
+});
+
+Route::get('/contacto',function ()
+{
+  return view('contacto');
+});
+
 Route::get('/inicio_admin',function ()
 {
   return view('inicio_admin');

@@ -7,20 +7,20 @@
     <div>
 
       <div>
-        <h2>Mision</h2>
+        <h4 class="p3">Misión</h4>
         <p class="p2">
           La Misión de Constructora Sodeca Unión Ltda es de PROVEER a todo tipo de familia de esa VIVIENDA SOÑADA, haciendo realidad la ILUSION de habitar en un lugar propio, seguro, CONFORTABLE y lleno de espacios amplios y personalizados al GUSTO del cliente; brindando las formas de adquisición, GARANTÍAS,  respaldo, cumplimiento y ENTREGA OPORTUNA, para así lograr un crecimiento sostenible y satisfacer las expectativas de nuestros clientes, socios, empleados y demás grupos de interés.<br><br>
           Garantizando a nuestros clientes al momento de recibir su proyecto de vivienda la Entera SATISFACCIÓN que toda familia sueña alcanzar, contribuyendo al ahorro de los recursos naturales ya que nuestros diseños se construyen con ventilación e iluminación natural, utilizando MATERIALES CERTIFICADOS y mano de obra calificada.
         </p>
       </div>
       <div>
-        <h2>Vision</h2>
+        <h4 class="p3">Visión</h4>
         <p class="p2">
           INNOVAR en forma constante en diseño, TENDENCIAS FUTURISTAS, materiales resistentes, formas de adquisición y modelos de viviendas amigables con el medio ambiente, logrando para el año 2019 ser reconocida en Montería como una compañía EFICIENTE, seria, oportuna y COMPROMETIDA con la entera SATISFACCIÓN DE NUESTROS CLIENTES; como resultado de la calidad de nuestras construcciones y la excelencia de nuestro trabajo enfocado en el CUMPLIMIENTO de compromisos contraídos con los clientes.
         </p>
       </div>
     </div>
-    <h2>Política de Calidad</h2>
+    <h4 class="p3">Política de Calidad</h4>
     <p class="p2">
       Nuestra Política de Calidad se centra en CUATRO ejes principales:<br> <br>
       1. Acatando las leyes y normas vigentes en nuestro territorio, cumpliendo oportunamente con los compromisos ciudadanos y como contribuyente.<br> <br>
