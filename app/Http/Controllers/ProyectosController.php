@@ -87,6 +87,7 @@ class ProyectosController extends Controller
       $image->proyectoFk = $id;
 
       $img = $request->file($imagen);
+      $image->nombreImagen = $img -> getClientOriginalName();
       $file_rout = time().'_'.$img->getClientOriginalName(); //metodo time() guarda la hora de unix
 
       storage::disk('imgProyectos')->put($file_rout, file_get_contents($img->getRealPath()));
