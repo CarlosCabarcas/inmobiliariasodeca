@@ -21,6 +21,11 @@
       </div>
 
       <div class="form-group">
+        <label for="caracteristicas">Características</label>
+        <textarea rows="3" class="form-control"  name="caracteristicas" placeholder="Características del proyecto"></textarea>
+      </div>
+
+      <div class="form-group">
         <label for="imagen">Imagenes</label>
         <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any" name="imagen1">
         <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any" name="imagen2">

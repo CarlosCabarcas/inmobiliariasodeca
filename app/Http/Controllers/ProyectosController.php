@@ -52,7 +52,8 @@ class ProyectosController extends Controller
       $datos = array(
         'nombreProyecto' => $request->nombre,
         'tipoInmueble' => $request->categoria,
-        'descripcion' => nl2br($request->descripcion)
+        'descripcion' => nl2br($request->descripcion),
+        'caracteristicas' => $request->caracteristicas
       );
       $proyecto = new ProyectoInmobiliario($datos);
       $proyecto->save();

@@ -20,7 +20,7 @@
           <div class="card-reveal" style="display:none; transform: translateY(0%); background-color: rgb(102, 234, 202);">
             <span class="card-title grey-text text-darken-4">Características<i class="material-icons right">close</i></span>
             <p class="caption">
-              <?php echo ($in->descripcion) ?>
+              <?php echo ($in->caracteristicas) ?>
             </p>
           </div>
         </div>
