@@ -7,10 +7,17 @@
     @if(isset($proyectos))
     <div class="row">
       @foreach($proyectos as $in)
+      <!--@if(isset($imagenes))
+      @foreach($imagenes as $en)
+        <img src="{{ $en -> idImagen }}" alt="">
+
+      @endforeach
+      @endif-->
+
       <div class="col s12 m4">
         <div class="card sticky-action hoverable">
           <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="{{asset('images/1vallejo.jpg')}}">
+            <img class="activator" src="imgProyectos/{{ $in->imagen_principal }}">
           </div>
           <div class="card-content">
             <span class="card-title activator grey-text text-darken-4">{{ $in->nombreProyecto }}<i class="material-icons right">more_vert</i></span>

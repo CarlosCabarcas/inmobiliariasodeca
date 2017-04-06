@@ -8,6 +8,11 @@ class ProyectoInmobiliario extends Model
 {
     //
     protected $fillable = [
-      'nombreProyecto', 'tipoInmueble', 'ubicacion', 'descripcion', 'caracteristicas'
+      'nombreProyecto', 'tipoInmueble', 'ubicacion', 'descripcion', 'caracteristicas','imagen_principal'
     ];
+
+    public function imagenes()
+    {
+      return $this->hasMany('App\Imagen','proyectoFk','id');
+    }
 }

@@ -26,6 +26,10 @@
       </div>
 
       <div class="form-group">
+        <label for="imagen-principal">Imagen principal</label>
+        <input type="file" name="imagen-principal" value="" multiple="true" data-preview-file-type="any">
+      </div>
+      <div class="form-group">
         <label for="imagen">Imagenes</label>
         <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any" name="imagen1">
         <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any" name="imagen2">

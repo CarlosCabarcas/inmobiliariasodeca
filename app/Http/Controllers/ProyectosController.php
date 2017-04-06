@@ -39,7 +39,7 @@ class ProyectosController extends Controller
     public function mostrar()
     {
       $proyectos = ProyectoInmobiliario::all();
-      return view('proyectos') -> with(['proyectos' => $proyectos]);
+      return view('proyectos', compact('proyectos'));
     }
     /**
      * Store a newly created resource in storage.
@@ -49,12 +49,18 @@ class ProyectosController extends Controller
      */
     public function store(Request $request)
     {
-      $datos = array(
-        'nombreProyecto' => $request->nombre,
-        'tipoInmueble' => $request->categoria,
-        'descripcion' => nl2br($request->descripcion),
-        'caracteristicas' => $request->caracteristicas
-      );
+        $img = $request->file('imagen-principal');
+        $file_rout = time().'_'.$img->getClientOriginalName(); //metodo time() guarda la hora de unix
+
+        storage::disk('imgProyectos')->put($file_rout, file_get_contents($img->getRealPath()));
+
+        $datos = array(
+          'nombreProyecto' => $request->nombre,
+          'tipoInmueble' => $request->categoria,
+          'descripcion' => nl2br($request->descripcion),
+          'caracteristicas' => $request->caracteristicas,
+          'imagen_principal' => $file_rout
+        );
       $proyecto = new ProyectoInmobiliario($datos);
       $proyecto->save();
 
