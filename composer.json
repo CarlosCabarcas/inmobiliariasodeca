@@ -10,7 +10,8 @@
         "doctrine/dbal": "2.5.1",
         "genealabs/phpgmaps": "~0.3.0",
         "alexpechkarev/google-maps": "1.0.7",
-        "laravelcollective/annotations": "5.1.*"
+        "laravelcollective/annotations": "5.1.*",
+        "guzzlehttp/guzzle": "~4.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

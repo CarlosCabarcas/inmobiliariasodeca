@@ -29,10 +29,12 @@ Route::get('/proyectos', 'ProyectosController@mostrar');
 
 Route::get('/ver_proyecto/{nombre}/{idproyecto}', 'ImagenController@index');
 
-Route::get('/contacto', function ()
+Route::get('/contacto',['as' => 'contact', function ()
 {
   return view('contacto');
-});
+}]);
+
+Route::post('send', ['as' => 'enviar', 'uses' => 'MailController@send']);
 
 //**********************************
 Route::get('/crear_proyecto', ['as' => 'create_proyecto', 'uses' => 'ProyectosController@index']);
