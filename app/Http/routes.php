@@ -27,6 +27,8 @@ Route::get('/inicio_admin',function ()
 
 Route::get('/proyectos', 'ProyectosController@mostrar');
 
+Route::get('/ver_proyecto/{nombre}/{idproyecto}', 'ImagenController@index');
+
 Route::get('/contacto', function ()
 {
   return view('contacto');

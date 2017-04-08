@@ -114,3 +114,7 @@ dl dd a {}
 #form label strong {font-weight:normal; display:block; padding-bottom:5px;}
 .btns {text-align:left; width:620px; padding-top:18px;}
 .btns a {display:inline-block; margin:0 20px 0 0px;}
+.titulo{
+  position: relative;
+  color: white;
+}

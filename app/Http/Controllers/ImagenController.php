@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Imagen;
 
 class ImagenController extends Controller
 {
@@ -14,9 +15,10 @@ class ImagenController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($idproyecto)
+    public function index($nombre,$idproyecto)
     {
-        //
+      $imagenes = Imagen::where('proyectoFk', $idproyecto)->get();
+      return view('ver_proyecto', compact('imagenes','nombre'));//
     }
 
     /**

@@ -22,7 +22,7 @@
           <div class="card-content">
             <span class="card-title activator grey-text text-darken-4">{{ $in->nombreProyecto }}<i class="material-icons right">more_vert</i></span>
             <!-- Modal Trigger -->
-            <a class="waves-effect waves-light btn blue" href="#">Ver</a>
+            <a class="waves-effect waves-light btn blue" href="/ver_proyecto/{{ $in->nombreProyecto }}/{{ $in->id }}">Ver</a>
           </div>
           <div class="card-reveal" style="display:none; transform: translateY(0%); background-color: rgb(102, 234, 202);">
             <span class="card-title grey-text text-darken-4">Características<i class="material-icons right">close</i></span>
