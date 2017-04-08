@@ -14,7 +14,7 @@
 
     <link href="{{ asset('css/style3.css') }}" rel="stylesheet">
 
-    <link href="{{ asset('css/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+    <!--<link href="{{ asset('css/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">-->
 
   </head>
 
@@ -56,6 +56,8 @@
     <script src="{{ asset('js/jquery2.0.3.min.js')}}"></script>
     <script>window.jQuery || document.write('<script src="{{ asset("js/jquery2.0.3.min.js")}}"><\/script>')</script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-
+    <!-- Api Google map -->
+    <script async="" defer="" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBbAzRFLE3CS4p52WKwYsRWmteUZTAOkm8&callback=initMap&libraries=places">
+    </script>
   </body>
 </html>
