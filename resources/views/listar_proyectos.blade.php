@@ -58,9 +58,10 @@ img
           </div>
         </td>
       </tr>
-      @endforeach
+  @endforeach
     </tbody>
   </table>
+  {!! $proyectos->render() !!}
 </div>
 <script>
   function confirmar(url)
@@ -72,5 +73,6 @@ img
     //
   }
 </script>
+
 
 @endsection

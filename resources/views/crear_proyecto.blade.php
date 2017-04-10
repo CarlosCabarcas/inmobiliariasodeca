@@ -1,7 +1,7 @@
 @extends('layout_admin')
 
 @section('title')
-  Platform - Inicio Admin
+  Platform - Admin
 @endsection
 
 @section('content')

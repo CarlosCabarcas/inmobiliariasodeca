@@ -3,15 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
 use Storage;
-
 use App\ProyectoInmobiliario;
-
 use App\Imagen;
+use DB;
 
 
 class ProyectosController extends Controller
@@ -27,7 +24,7 @@ class ProyectosController extends Controller
     }
 
     public function listarProyectos(){
-      $proyectos = ProyectoInmobiliario::all();
+      $proyectos = ProyectoInmobiliario::paginate(3);
 
       return view('listar_proyectos', compact('proyectos'));
     }
@@ -152,11 +149,17 @@ class ProyectosController extends Controller
     {
         $proyect = ProyectoInmobiliario::findOrFail($id);
 
+        $img = $request->file('imagen-principal');
+        $file_rout = time().'_'.$img->getClientOriginalName(); //metodo time() guarda la hora de unix
+
+        storage::disk('imgProyectos')->put($file_rout, file_get_contents($img->getRealPath()));
+
         $request = array(
           'nombreProyecto' => $request->nombre,
           'tipoInmueble' => $request->categoria,
           'descripcion' => $request->descripcion,
           'caracteristicas' => $request->caracteristicas,
+          'imagen_principal' => $file_rout,
           'latitud' => $request->lat,
           'longitud' => $request->lng
         );
