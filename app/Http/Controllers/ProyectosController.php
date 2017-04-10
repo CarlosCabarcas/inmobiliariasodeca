@@ -10,6 +10,7 @@ use App\ProyectoInmobiliario;
 use App\Imagen;
 use DB;
 
+use App\Http\Requests\ProyectosRequest;
 
 class ProyectosController extends Controller
 {
@@ -56,7 +57,7 @@ class ProyectosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProyectosRequest $request)
     {
         $img = $request->file('imagen-principal');
         $file_rout = time().'_'.$img->getClientOriginalName(); //metodo time() guarda la hora de unix
@@ -90,7 +91,7 @@ class ProyectosController extends Controller
       }
       if($request->file('imagen4')){
         $imagen = 'imagen4';
-        $this->guardarImagen($request, $proyecto->id, $imagen);
+        $this->guardarImagen($proyecto->id, $imagen);
       }
       //}
 
@@ -99,7 +100,7 @@ class ProyectosController extends Controller
       //return back();
     }
 
-    public function guardarImagen($request, $id, $imagen){
+    public function guardarImagen(Request $request, $id, $imagen){
       $image = new Imagen();
 
       $image->proyectoFk = $id;
