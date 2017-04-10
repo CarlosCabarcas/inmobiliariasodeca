@@ -40,7 +40,7 @@ img
         <th>Nombre del proyecto</th>
         <th>Tipo de inmueble</th>
         <th>Imagen principal</th>
-        <th>Caracteristicas</th>
+        <th>Descripción</th>
         <th>Controles</th>
       </tr>
     </thead>
@@ -50,7 +50,7 @@ img
         <td>{{$proyect->nombreProyecto}}</td>
         <td>{{$proyect->tipoInmueble}}</td>
         <td><img src="imgProyectos/{{$proyect->imagen_principal	}}" class="img-responsive" height="50px" width="70px"></td>
-        <td>{{$proyect->caracteristicas}}</td>
+        <td>{{$proyect->descripcion}}</td>
         <td>
           <div class="btn-group btn-group-xs" role="group" aria-label="...">
             <a type="button" href="{{route('editar_proyecto', $proyect->id)}}" class="btn btn-success"><i class="fa fa-pencil-square-o" aria-hidden="true"> Editar</i></a>
