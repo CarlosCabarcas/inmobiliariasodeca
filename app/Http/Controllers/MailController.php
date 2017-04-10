@@ -23,7 +23,7 @@ class MailController extends Controller
           $message->subject($request->subject);
           $message->to(env('CONTACT_MAIL'), env('CONTACT_NAME'));
         });
-        return redirect()->route('contact')->with('mensaje','Mensaje enviado exitosamente');
+        return redirect()->route('')->with('mensaje','Mensaje enviado exitosamente');
     }
 
     /**

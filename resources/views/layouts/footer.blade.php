@@ -1,28 +1,53 @@
-<footer class="">
+<footer id="contact" class="page-footer default_color scrollspy">
     <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="p3">SODECA UNIÓN LTDA</h5>
-          <ul>
-            <li><a href="/nosotros" class="p3">Nosotros</a></li>
-            <li><a href="/contacto" class="p3">Contacto</a></li>
-            <li><a href="/proyectos" class="p3">Proyectos</a></li>
-          </ul>
+        <div class="row">
+            <div class="col l6 s12">
+                <form class="col s12" action="{{ route('enviar') }}" method="post">
+                    {!! csrf_field() !!}
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <i class="mdi-action-account-circle prefix white-text"></i>
+                            <input id="icon_prefix" name="name" type="text" class="validate white-text">
+                            <label for="icon_prefix" class="white-text">Nombre:</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <i class="mdi-communication-email prefix white-text"></i>
+                            <input id="icon_email" name="email" type="email" class="validate white-text">
+                            <label for="icon_email" class="white-text">Correo:</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <i class="mdi-action-subject prefix white-text"></i>
+                            <input id="icon_subject" name="subject" type="text" class="validate white-text">
+                            <label for="icon_subject" class="white-text">Asunto:</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <i class="mdi-editor-mode-edit prefix white-text"></i>
+                            <textarea id="icon_prefix2" name="body" class="materialize-textarea white-text"></textarea>
+                            <label for="icon_prefix2" class="white-text">Mensaje:</label>
+                        </div>
+                        <div class="col offset-s7 s5">
+                            <button class="btn waves-effect waves-light red darken-1" type="submit">Enviar
+                                <i class="mdi-content-send right white-text"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col l3 s12 offset-l3">
+                <h5 class="white-text">Social</h5>
+                <ul>
+                        <a class="white-text" href="https://www.facebook.com/sodecaunionltda/">
+                            <i class="small fa fa-facebook-square white-text"></i> Facebook
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="p3">Nuestras Redes</h5>
-          <ul>
-            <li><a href="https://www.facebook.com/Sodeca-Uni%C3%B3n-Ltda-1789881614665523/?fref=ts" target="_blank"><img alt="Siguenos en Facebook" src="{{asset('images/fac.png')}}" width=48 height=48  /></a></li>
-            <!--<li><a href="http://twitter.com/AQUI_TU_USUARIO" target="_blank"><img src="{{asset('images/twi.png')}}" width=48 height=48 alt="Síguenos en Twitter" /></a></li>-->
+    </div>
+    <div class="footer-copyright default_color">
+        <div class="container">
+            Copyright &copy; 2017 Copyright Holder All Rights Reserved.
         </div>
-      </div>
     </div>
-    <div class="footer-copyright">
-      <div class="container">
-          © 2017 Copyright Text
-      </div>
-    </div>
-  </footer>
-<script>
-	Cufon.now();
-</script>
+</footer>
