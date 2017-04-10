@@ -10,21 +10,22 @@
 </script>
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
   <h1 class="page-header">Inmobiliaria Sodeca <small>AGREGAR PROYECTO</small></h1>
-  <form class="" action="{{route('save_proyecto')}}" method="POST" enctype="multipart/form-data">
+@foreach($editar as $edit)
+  <form class="" action="{{route('guardar_edicion', $edit->id)}}" method="POST" enctype="multipart/form-data">
   {!! csrf_field() !!}
     <div class="col-md-6">
       <div class="form-group">
         <label for="nombre">Nombre del proyecto</label>
-        <input type="text" class="form-control" name="nombre" placeholder="Nombre del proyecto">
+        <input type="text" class="form-control" name="nombre" placeholder="Nombre del proyecto" value="{{$edit->nombreProyecto}}">
       </div>
       <div class="form-group">
         <label for="descripcion">Descripción</label>
-        <textarea rows="3" class="form-control"  name="descripcion" placeholder="Descripción del proyecto"></textarea>
+        <textarea rows="3" class="form-control"  name="descripcion" placeholder="Descripción del proyecto">{{$edit->descripcion}}</textarea>
       </div>
 
       <div class="form-group">
         <label for="caracteristicas">Características</label>
-        <textarea rows="3" class="form-control"  name="caracteristicas" placeholder="Características del proyecto"></textarea>
+        <textarea rows="3" class="form-control"  name="caracteristicas" placeholder="Características del proyecto">{{$edit->caracteristicas}}</textarea>
       </div>
 
       <div class="form-group">
@@ -43,7 +44,7 @@
       <div class="form-group">
         <label for="categoria">Tipo de Inmueble</label>
         <select class="form-control" name="categoria">
-          <option value="">Seleccione un tipo de inmueble</option>
+          <option value="{{$edit->tipoInmueble}}">{{$edit->tipoInmueble}}</option>
           <option value="Casa">Casa</option>
           <option value="Apartamento">Apartamento</option>
           <option value="Casa finca">Casa finca</option>
@@ -66,30 +67,33 @@
 
       <div class="form-group">
         <label for="lat">Latitud</label>
-        <input type="text" name="lat" id="lat" class="form-control">
+        <input type="text" name="lat" id="lat" class="form-control" value="{{$edit->latitud}}">
       </div>
 
       <div class="form-group">
         <label for="lng">Longitud</label>
-        <input type="text" name="lng" id="lng" class="form-control">
+        <input type="text" name="lng" id="lng" class="form-control" value="{{$edit->longitud}}">
       </div>
 
     </div>
 
     <!--script para manipular el mapa-->
     <script>
+    var lat = {{$edit->latitud}}
+    var lng = {{$edit->longitud}}
+
     var  map = new google.maps.Map(document.getElementById('map'),{
       center:{
-        lat: 8.76055140911674,
-        lng: -75.88197000000002
+        lat: lat,
+        lng: lng
       },
       zoom: 14
     });
 
     var marker =  new google.maps.Marker({
       position: {
-        lat: 8.76055140911674,
-        lng: -75.88197000000002
+        lat: lat,
+        lng: lng
       },
       map: map,
       draggable: true
@@ -118,6 +122,7 @@
     });
     </script>
   </form>
+  @endforeach
 </div>
 
 @endsection

@@ -20,6 +20,8 @@ class CreateProyectoInmobiliariosTable extends Migration
             $table->string('descripcion');
             $table->string('caracteristicas');
             $table->string('imagen_principal');
+            $table->string('latitud');
+            $table->string('longitud');
             $table->timestamps();
         });
     }

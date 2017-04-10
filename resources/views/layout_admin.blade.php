@@ -14,6 +14,10 @@
 
     <link href="{{ asset('css/style3.css') }}" rel="stylesheet">
 
+    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
+
+    <script src="https://use.fontawesome.com/c0988e1618.js"></script>
+
     <!--<link href="{{ asset('css/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">-->
 
   </head>
@@ -43,7 +47,8 @@
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
             <li class="active"><a href="/inicio_admin"><i class="fa fa-home" aria-hidden="true"></i> Inicio <span class="sr-only">(current)</span></a></li>
-            <li><a href="/crear_proyecto"> <i class="fa fa-shopping-bag" aria-hidden="true"></i> Agregar proyecto </a></li>
+            <li><a href="/crear_proyecto"><i class="fa fa-plus-square" aria-hidden="true"></i> Agregar proyecto </a></li>
+            <li><a href="/listar_proyectos"><i class="fa fa-align-justify" aria-hidden="true"></i> Listar proyectos </a></li>
           </ul>
         </div>
 
@@ -57,7 +62,6 @@
     <script>window.jQuery || document.write('<script src="{{ asset("js/jquery2.0.3.min.js")}}"><\/script>')</script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <!-- Api Google map -->
-    <script async="" defer="" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBbAzRFLE3CS4p52WKwYsRWmteUZTAOkm8&callback=initMap&libraries=places">
-    </script>
+
   </body>
 </html>

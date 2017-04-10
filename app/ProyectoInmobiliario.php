@@ -8,7 +8,8 @@ class ProyectoInmobiliario extends Model
 {
     //
     protected $fillable = [
-      'nombreProyecto', 'tipoInmueble', 'ubicacion', 'descripcion', 'caracteristicas','imagen_principal'
+      'nombreProyecto', 'tipoInmueble', 'ubicacion', 'descripcion', 'caracteristicas'
+      ,'imagen_principal', 'latitud', 'longitud'
     ];
 
     public function imagenes()

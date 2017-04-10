@@ -26,6 +26,18 @@ class ProyectosController extends Controller
         return view('crear_proyecto');
     }
 
+    public function listarProyectos(){
+      $proyectos = ProyectoInmobiliario::all();
+
+      return view('listar_proyectos', compact('proyectos'));
+    }
+
+    public function mostrarProyectosEdit($id){
+      $editar = ProyectoInmobiliario::where('id', '=', $id)->get();
+
+      return view('editar_proyecto', compact('editar'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -59,7 +71,9 @@ class ProyectosController extends Controller
           'tipoInmueble' => $request->categoria,
           'descripcion' => nl2br($request->descripcion),
           'caracteristicas' => $request->caracteristicas,
-          'imagen_principal' => $file_rout
+          'imagen_principal' => $file_rout,
+          'latitud' => $request->lat,
+          'longitud' => $request->lng
         );
       $proyecto = new ProyectoInmobiliario($datos);
       $proyecto->save();
@@ -83,7 +97,7 @@ class ProyectosController extends Controller
       }
       //}
 
-      return redirect()->route('create_proyecto');
+      return redirect()->route('listar_proyecto');
       //o
       //return back();
     }
@@ -136,7 +150,21 @@ class ProyectosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $proyect = ProyectoInmobiliario::findOrFail($id);
+
+        $request = array(
+          'nombreProyecto' => $request->nombre,
+          'tipoInmueble' => $request->categoria,
+          'descripcion' => $request->descripcion,
+          'caracteristicas' => $request->caracteristicas,
+          'latitud' => $request->lat,
+          'longitud' => $request->lng
+        );
+
+        $id_proyect = $proyect->id;
+        $proyect->fill($request);
+        $proyect->save();
+        return redirect()->route('listar_proyecto');
     }
 
     /**
@@ -147,6 +175,10 @@ class ProyectosController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $proyecto = ProyectoInmobiliario::findOrFail($id);
+
+        $eliminar = $proyecto->delete();
+
+        return redirect()->route('listar_proyecto');
     }
 }

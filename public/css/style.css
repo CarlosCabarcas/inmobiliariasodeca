@@ -1,6 +1,11 @@
 /* Global properties ======================================================== */
 html, body {width:100%; padding:0; margin:0;}
-body {font:14px/25px Arial,Helvetica,sans-serif;color:#939393;min-width:1264px;background:#131313}
+body {
+  font:14px/25px Arial,Helvetica,sans-serif;
+  color:#939393;
+  min-width:1264px;
+  background:#ffffff;
+}
 .ic {border:0;float:right;background:#fff;color:#f00;width:50%;line-height:10px;font-size:10px;margin:-220% 0 0 0;overflow:hidden;padding:0}
 .main {width:100%; background:#272727;}
 /***********************************************************************/

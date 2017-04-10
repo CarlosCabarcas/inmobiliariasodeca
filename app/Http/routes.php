@@ -40,3 +40,11 @@ Route::post('send', ['as' => 'enviar', 'uses' => 'MailController@send']);
 Route::get('/crear_proyecto', ['as' => 'create_proyecto', 'uses' => 'ProyectosController@index']);
 
 Route::post('/guardar_proyecto', ['as' => 'save_proyecto', 'uses' => 'ProyectosController@store']);
+
+Route::get('/listar_proyectos', ['as' => 'listar_proyecto', 'uses' => 'ProyectosController@listarProyectos']);
+
+Route::get('/eliminar_proyecto/{id}', ['as' => 'delete', 'uses' => 'ProyectosController@destroy']);
+
+Route::get('/editar_proyecto/{id}', ['as' => 'editar_proyecto', 'uses' => 'ProyectosController@mostrarProyectosEdit']);
+
+Route::post('/guardar_edicion/{id}', ['as' => 'guardar_edicion', 'uses' => 'ProyectosController@update']);
