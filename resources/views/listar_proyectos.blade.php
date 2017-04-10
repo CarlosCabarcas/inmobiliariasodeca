@@ -49,7 +49,7 @@ img
       <tr>
         <td>{{$proyect->nombreProyecto}}</td>
         <td>{{$proyect->tipoInmueble}}</td>
-        <td><img src="imgProyectos/{{$proyect->imagen_principal	}}" class="img-responsive" height="50px" width="70px"></td>
+        <td><img src="imgProyectos/{{$proyect->imagen_principal	}}" class="zoom" height="50px" width="70px"></td>
         <td>{{$proyect->descripcion}}</td>
         <td>
           <div class="btn-group btn-group-xs" role="group" aria-label="...">
@@ -73,6 +73,22 @@ img
     //
   }
 </script>
-
+<style type="text/css">
+    .zoom{
+        /* Aumentamos la anchura y altura durante 2 segundos */
+        transition: width 6s, height 6s, transform 6s;
+        -moz-transition: width 6s, height 6s, -moz-transform 6s;
+        -webkit-transition: width 6s, height 6s, -webkit-transform 6s;
+        -o-transition: width 6s, height 6s,-o-transform 6s;
+    }
+    .zoom:hover{
+        /* tranformamos el elemento al pasar el mouse por encima al doble de
+           su tamaño con scale(2). */
+        transform : scale(6);
+        -moz-transform : scale(6);      /* Firefox */
+        -webkit-transform : scale(6);   /* Chrome - Safari */
+        -o-transform : scale(6);        /* Opera */
+    }
+</style>
 
 @endsection
