@@ -37,7 +37,7 @@
             <div class="col l3 s12 offset-l3">
                 <h5 class="white-text">Social</h5>
                 <ul>
-                        <a class="white-text" href="https://www.facebook.com/sodecaunionltda/">
+                        <a class="white-text" target="_blank" href="https://www.facebook.com/sodecaunionltda/">
                             <i class="small fa fa-facebook-square white-text"></i> Facebook
                         </a>
                     </li>

@@ -6,4 +6,5 @@
     <!-- CSS  -->
     <link href="{{ asset('min/plugin-min.css') }}" type="text/css" rel="stylesheet">
     <link href="{{ asset('min/custom-min.css') }}" type="text/css" rel="stylesheet" >
+    
 </head>

@@ -5,10 +5,10 @@
            <img src="img/sodeca_isologo.png" style="width: 13%; padding-top: .2em">
            <!-- <a href="#" id="logo-container"> Sodeca Unión Ltda</a> -->
                <ul class="right hide-on-med-and-down">
-                   <li><a href="#intro">Inicio</a></li>
-                   <li><a href="#work">Proyectos</a></li>
-                   <li><a href="#team">Quienes Somos</a></li>
-                   <li><a href="#contact">Contacto</a></li>
+                   <li><a href="#intro"><strong>Inicio</strong></a></li>
+                   <li><a href="#work"><strong>Proyectos</strong></a></li>
+                   <li><a href="#team"><strong>Quienes Somos</strong></a></li>
+                   <li><a href="#contact"><strong>Contacto</strong></a></li>
                </ul>
                <ul id="nav-mobile" class="side-nav">
                    <li><a href="#intro">Inicio</a></li>

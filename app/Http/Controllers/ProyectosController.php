@@ -67,8 +67,8 @@ class ProyectosController extends Controller
         $datos = array(
           'nombreProyecto' => $request->nombre,
           'tipoInmueble' => $request->categoria,
-          'descripcion' => nl2br($request->descripcion),
-          'caracteristicas' => $request->caracteristicas,
+          'descripcion' => $request->descripcion,
+          'caracteristicas' => nl2br($request->caracteristicas),
           'imagen_principal' => $file_rout,
           'latitud' => $request->lat,
           'longitud' => $request->lng
