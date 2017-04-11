@@ -91,7 +91,7 @@ class ProyectosController extends Controller
       }
       if($request->file('imagen4')){
         $imagen = 'imagen4';
-        $this->guardarImagen($proyecto->id, $imagen);
+        $this->guardarImagen($request, $proyecto->id, $imagen);
       }
       //}
 

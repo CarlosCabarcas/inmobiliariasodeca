@@ -10,7 +10,7 @@
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4"> <i class="mdi-navigation-more-vert right"></i></span>
-                        <p><a href="#">{{$in -> nombreProyecto}}</a></p>
+                        <p><a href="/ver_proyecto/{{ $in->nombreProyecto }}/{{ $in->id }}">{{$in -> nombreProyecto}}</a></p>
                     </div>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">{{$in -> nombreProyecto}}<i class="mdi-navigation-close right"></i></span>

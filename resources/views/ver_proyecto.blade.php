@@ -1,60 +1,58 @@
-@extends('template')
-@section('content')
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
-    <link rel="stylesheet" href="https://raw.github.com/blueimp/Bootstrap-Image-Gallery/master/css/bootstrap-image-gallery.css">
-    <link rel="stylesheet" href="https://raw.github.com/blueimp/Bootstrap-Image-Gallery/master/css/demo.css">
-    <div class="container">
-        <!-- The container for the list of example images -->
-        <div id="links">
-          <h1 class="titulo"><strong> {{ $nombre }} </strong></h1>
-          <br>
-          @foreach($imagenes as $in)
-            <a data-gallery="" title="Natalia" href="{{ asset('imgProyectos') }}/{{ $in->ruta }}">
-                <img src="{{ asset('imgProyectos') }}/{{ $in->ruta }}" width="150 px" height="150 px">
-            </a>
-          @endforeach
-        </div>
-        <br>
-    </div>
-    <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
-    <div id="blueimp-gallery" class="blueimp-gallery">
-        <!-- The container for the modal slides -->
-        <div class="slides"></div>
-        <!-- Controls for the borderless lightbox -->
-        <h3 class="title"></h3>
-        <a class="prev">‹</a>
-        <a class="next">›</a>
-        <a class="close">×</a>
-        <a class="play-pause"></a>
-        <ol class="indicator"></ol>
-        <!-- The modal dialog, which will be used to wrap the lightbox content -->
-        <div class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" aria-hidden="true">×</button>
-                        <h4 class="modal-title"></h4>
-                    </div>
-                    <div class="modal-body next"></div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default pull-left prev">
-                            <i class="glyphicon glyphicon-chevron-left"></i>
-                            Previous
-                        </button>
-                        <button type="button" class="btn btn-primary next">
-                            Next
-                            <i class="glyphicon glyphicon-chevron-right"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <!-- Bootstrap JS is not required, but included for the responsive demo navigation and button states -->
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
-    <script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
-    <script src="https://raw.github.com/blueimp/Bootstrap-Image-Gallery/master/js/bootstrap-image-gallery.js"></script>
-    <script src="https://raw.github.com/blueimp/Bootstrap-Image-Gallery/master/js/demo.js"></script>-->
-@endsection
+<!DOCTYPE html>
+<html>
+  @include('layouts/head')
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ asset('css/w3.css') }}">
+  </head>
+  <body id="top" class="scrollspy">
+
+  <!-- Pre Loader -->
+  <div id="loader-wrapper">
+      <div id="loader"></div>
+
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+
+  </div>
+  @include('layouts/navbar')
+
+<h2 class="w3-center">Manual Slideshow</h2>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="{{asset('imgProyectos/1491765536_290097.png')}}" style="width:100%">
+  <img class="mySlides" src="img_lights.jpg" style="width:100%">
+  <img class="mySlides" src="img_mountains.jpg" style="width:100%">
+  <img class="mySlides" src="img_forest.jpg" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+
+  @include('layouts/footer')
+
+    <script src="min/plugin-min.js"></script>
+    <script src="min/custom-min.js"></script>
+
+  </body>
+</html>
