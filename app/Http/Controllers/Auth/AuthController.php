@@ -62,4 +62,10 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+
+    protected $redirectPath = '/inicio_admin';
+
+    protected $loginPath = 'auth/login';
+
+
 }

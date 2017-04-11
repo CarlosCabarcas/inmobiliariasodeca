@@ -18,6 +18,9 @@ Route::get('/nosotros',function ()
   return view('nosotros');
 });
 
+
+Route::group(['middleware' => ['auth']], function() //guardo las rutas de administrador en un grupo de rutas y le asigno el middleware auth para que solo lo deje ingresar si esta ha iniciado sesión
+{
 Route::get('/inicio_admin',function ()
 {
   return view('inicio_admin');
@@ -46,3 +49,13 @@ Route::get('/eliminar_proyecto/{id}', ['as' => 'delete', 'uses' => 'ProyectosCon
 Route::get('/editar_proyecto/{id}', ['as' => 'editar_proyecto', 'uses' => 'ProyectosController@mostrarProyectosEdit']);
 
 Route::post('/guardar_edicion/{id}', ['as' => 'guardar_edicion', 'uses' => 'ProyectosController@update']);
+});
+/*FIN ADMIN ---------------*/
+
+// Authentication routes...
+Route::get('auth/login','Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', ['as' => 'logout', 'uses' =>'Auth\AuthController@getLogout']);
+// Registration routes...
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
