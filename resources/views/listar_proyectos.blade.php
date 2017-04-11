@@ -32,7 +32,7 @@ img
 }
 </style>-->
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-  <h1 class="page-header">Inmobiliaria Sodeca <small>LISTADO DE PROYECTOS</small></h1>
+  <h1 class="page-header">Sodeca Unión LTDA<small> LISTADO DE PROYECTOS</small></h1>
 
   <table class="table table-responsive table-striped table-hover table-condensed">
     <thead>
