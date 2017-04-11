@@ -110,6 +110,6 @@ body {
 }
 #map2{
   height: 300px;
-  width: 490px;
+  width: 100%;
   margin: 0 auto;
 }

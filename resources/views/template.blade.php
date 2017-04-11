@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
   @include('layouts/head')
   <body id="top" class="scrollspy">
@@ -24,7 +25,7 @@
   @include('layouts/quienessomos')
 
   @include('layouts/footer')
-  
+
     <script src="min/plugin-min.js"></script>
     <script src="min/custom-min.js"></script>
 

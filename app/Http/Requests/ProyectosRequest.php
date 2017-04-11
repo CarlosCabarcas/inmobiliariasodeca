@@ -27,8 +27,8 @@ class ProyectosRequest extends Request
             'nombre' => 'required|string',
             'descripcion' => 'required|string',
             'caracteristicas' => 'required|string',
-            'imagen-principal' => 'required',
             'categoria' => 'required|string',
+            'imagen-principal' => 'required',
             'lat' => 'required',
             'lng' => 'required'
         ];

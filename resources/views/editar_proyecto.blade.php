@@ -27,11 +27,6 @@
         <label for="caracteristicas">Características</label>
         <textarea rows="3" class="form-control"  name="caracteristicas" placeholder="Características del proyecto">{{$edit->caracteristicas}}</textarea>
       </div>
-      <div class="form-group">
-        <label for="imagen-principal">Imagen principal</label>
-        <img src="{{asset('imgProyectos')}}/{{$edit->imagen_principal}}" class="img-responsive" height="50px" width="70px">
-        <input type="file" name="imagen-principal"  class="filestyle" value="" multiple="true" data-preview-file-type="any">
-      </div>
       <!--<div class="form-group">
         <label for="imagen">Imagenes</label>
         <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any" name="imagen1">
