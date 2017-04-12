@@ -26,8 +26,8 @@
 
   @include('layouts/footer')
 
-    <script src="min/plugin-min.js"></script>
-    <script src="min/custom-min.js"></script>
+    <script src="{{asset('min/plugin-min.js')}}"></script>
+    <script src="{{asset('min/custom-min.js')}}"></script>
 
   </body>
 </html>

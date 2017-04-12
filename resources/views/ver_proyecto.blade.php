@@ -4,8 +4,10 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ asset('css/w3.css') }}">
-  </head>
   <body id="top" class="scrollspy">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbAzRFLE3CS4p52WKwYsRWmteUZTAOkm8&libraries=places">
+</script>
 
   <!-- Pre Loader -->
   <div id="loader-wrapper">
@@ -16,43 +18,112 @@
 
   </div>
   @include('layouts/navbar')
+  <br><br>
+  <div class="row">
+   <div class="col s12">
+     <ul class="tabs">
+       <li class="tab col s3"><a href="#im">Imagenes</a></li>
+       <li class="tab col s3"><a href="#des">Descripcion</a></li>
+       <li class="tab col s3"><a href="#car">Características</a></li>
+       <li class="tab col s3"><a class="active" href="#ubi">Ubicación</a></li>
+     </ul>
+   </div>
+ </div>
+  <div class="container row">
+    <div id="des" class="col s12 container" style="display: none; height: 600px;">
+      <div class="container">
+        {{$proyecto -> descripcion}}
+      </div>
+    </div>
+    <div id="car" class="col s12 container" style="display: none; height: 600px;">
+      <div class="container">
+        <h2 class="center">Características</h2>
+        <h4 class=""><?php echo $proyecto->caracteristicas?></h4>
+      </div>
+    </div>
+    <div id="ubi" class="col s12 container" style="display: inherit; height: 600px;">
+        <div id="map2"></div>
+    </div>
+    <div id="im" class="col s12 container" style="display: none; height: 600px;">
+      <div class="slider">
+        <ul class="slides">
+          @foreach($imagenes as $in)
+          <li>
+            <img src="{{asset('imgProyectos')}}/{{$in->ruta}}" width="100%"> <!-- random image -->
+            <div class="caption center-align">
+              <h3>Esto le toca al gay del Arias</h3>
+              <h5 class="light grey-text text-lighten-3">{{$proyecto -> nombreProyecto}}</h5>
+            </div>
+          </li>
+          @endforeach
+        </ul>
+      </div>
+    </div>
+  </div>
 
-<h2 class="w3-center">Manual Slideshow</h2>
+  <style media="screen">
+    body{
+      background: url('{{asset("images/edificio.jpg")}}');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: 100%;
+    }
+    #map2{
+      width: 100%;
+      height: 500px;
+    }
+  </style>
+  <script src="{{asset('js/jquery2.0.3.min.js')}}" charset="utf-8"></script>
+  <script>
+  var lat = {{$proyecto->latitud}};
+  var lng = {{$proyecto->longitud}};
 
-<div class="w3-content w3-display-container">
-  <img class="mySlides" src="{{asset('imgProyectos/1491765536_290097.png')}}" style="width:100%">
-  <img class="mySlides" src="img_lights.jpg" style="width:100%">
-  <img class="mySlides" src="img_mountains.jpg" style="width:100%">
-  <img class="mySlides" src="img_forest.jpg" style="width:100%">
+  var  map = new google.maps.Map(document.getElementById('map2'),{
+    center:{
+      lat: lat,
+      lng: lng
+    },
+    zoom: 13
+  });
 
-  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-</div>
+  var marker = new google.maps.Marker({
+    position:{
+      lat:lat,
+      lng: lng
+    },
+    map:map
+  });
+  </script>
+  <script>
+  $(document).ready(function(){
+        $('.slider').slider();
+        $(".button-collapse").sideNav();
+        $('.materialboxed').materialbox();
+        $('ul.tabs').tabs();
 
-<script>
-var slideIndex = 1;
-showDivs(slideIndex);
+      /*  $('.slider').slider('pause');
+        // Start slider
+        $('.slider').slider('start');
+        // Next slide
+        $('.slider').slider('next');
+        // Previous slide
+        $('.slider').slider('prev');
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
+        // Show sideNav
+      $('.button-collapse').sideNav('show');
+      // Hide sideNav
+      $('.button-collapse').sideNav('hide');
+      // Destroy sideNav
+      $('.button-collapse').sideNav('destroy');*/
+  });
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  x[slideIndex-1].style.display = "block";
-}
-</script>
+
+  </script>
 
   @include('layouts/footer')
 
-    <script src="min/plugin-min.js"></script>
-    <script src="min/custom-min.js"></script>
+  <script src="{{asset('min/plugin-min.js')}}"></script>
+  <script src="{{asset('min/custom-min.js')}}"></script>
 
   </body>
 </html>

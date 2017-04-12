@@ -1,0 +1,1 @@
+@extendes('ver_proyecto')

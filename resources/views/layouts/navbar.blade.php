@@ -7,14 +7,14 @@
                <ul class="right hide-on-med-and-down">
                    <li><a href="/#intro"><strong>Inicio</strong></a></li>
                    <li><a href="/#work"><strong>Proyectos</strong></a></li>
-                   <li><a href="/#team"><strong>Quienes Somos</strong></a></li>
+                   <li><a href="/#team"><strong>Sobre Nosotros</strong></a></li>
                    <li><a href="/#contact"><strong>Contacto</strong></a></li>
                </ul>
                <ul id="nav-mobile" class="side-nav">
-                   <li><a href="#intro">Inicio</a></li>
-                   <li><a href="#work">Proyecto</a></li>
-                   <li><a href="#team">Quienes Somos</a></li>
-                   <li><a href="#contact">Contacto</a></li>
+                   <li><a href="/#intro">Inicio</a></li>
+                   <li><a href="/#work">Proyectos</a></li>
+                   <li><a href="/#team">Sobre Nosotros</a></li>
+                   <li><a href="/#contact">Contacto</a></li>
                </ul>
            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
            </div>

@@ -18,6 +18,8 @@ Route::get('/nosotros',function ()
   return view('nosotros');
 });
 
+Route::get('/ver_proyecto/{idproyecto}', 'ImagenController@index');
+
 
 Route::group(['middleware' => ['auth']], function() //guardo las rutas de administrador en un grupo de rutas y le asigno el middleware auth para que solo lo deje ingresar si esta ha iniciado sesión
 {
@@ -27,8 +29,6 @@ Route::get('/inicio_admin',function ()
 });
 
 Route::get('/proyectos', 'ProyectosController@mostrar');
-
-Route::get('/ver_proyecto/{nombre}/{idproyecto}', 'ImagenController@index');
 
 Route::get('/contacto',['as' => 'contact', function ()
 {
