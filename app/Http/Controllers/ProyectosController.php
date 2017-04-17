@@ -79,19 +79,27 @@ class ProyectosController extends Controller
       //foreach ($datos as $data) {
       if($request->file('imagen1')){
         $imagen = 'imagen1';
-        $this->guardarImagen($request, $proyecto->id, $imagen);
+        $nombre = 'nombreImagen1';
+        $descripcion = 'descripcionImagen1';
+        $this->guardarImagen($request, $proyecto->id, $imagen, $nombre, $descripcion);
       }
       if($request->file('imagen2')){
         $imagen = 'imagen2';
-        $this->guardarImagen($request, $proyecto->id, $imagen);
+        $nombre = 'nombreImagen2';
+        $descripcion = 'descripcionImagen2';
+        $this->guardarImagen($request, $proyecto->id, $imagen, $nombre, $descripcion);
       }
       if($request->file('imagen3')){
         $imagen = 'imagen3';
-        $this->guardarImagen($request, $proyecto->id, $imagen);
+        $nombre = 'nombreImagen3';
+        $descripcion = 'descripcionImagen3';
+        $this->guardarImagen($request, $proyecto->id, $imagen, $nombre, $descripcion);
       }
       if($request->file('imagen4')){
         $imagen = 'imagen4';
-        $this->guardarImagen($request, $proyecto->id, $imagen);
+        $nombre = 'nombreImagen4';
+        $descripcion = 'descripcionImagen4';
+        $this->guardarImagen($request, $proyecto->id, $imagen, $nombre, $descripcion);
       }
       //}
 
@@ -100,17 +108,18 @@ class ProyectosController extends Controller
       //return back();
     }
 
-    public function guardarImagen(Request $request, $id, $imagen){
+    public function guardarImagen(Request $request, $id, $imagen, $nombre, $descripcion){
       $image = new Imagen();
 
       $image->proyectoFk = $id;
 
       $img = $request->file($imagen);
-      $image->nombreImagen = $img -> getClientOriginalName();
       $file_rout = time().'_'.$img->getClientOriginalName(); //metodo time() guarda la hora de unix
 
       storage::disk('imgProyectos')->put($file_rout, file_get_contents($img->getRealPath()));
-      $image->ruta = $file_rout;//ruta nombre de campo en bd
+      $image->nombreImagen = $request->$nombre;
+      $image->descripcionImagen = $request->$descripcion;
+      $image->ruta = $file_rout;//rutImagena nombre de campo en bd
 
 
 

@@ -35,10 +35,26 @@
 
       <div class="form-group">
         <label for="imagen">Imagenes</label>
-        <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any" name="imagen1">
-        <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any" name="imagen2">
-        <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any" name="imagen3">
-        <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any" name="imagen4">
+        <div class="form-group">
+        <input type="text" name="nombreImagen1" value="" placeholder="Nombre" class="form-control">
+        <input type="text" name="descripcionImagen1" value="" placeholder="Descripcion" class="form-control">
+        <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any" name="imagen1" class="form-control">
+        </div>
+        <div class="form-group">
+        <input type="text" name="nombreImagen2" value="" placeholder="Nombre" class="form-control">
+        <input type="text" name="descripcionImagen2" value="" placeholder="Descripcion" class="form-control">
+        <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any" name="imagen2" class="form-control">
+      </div>
+        <div class="form-group">
+        <input type="text" name="nombreImagen3" value="" placeholder="Nombre" class="form-control">
+        <input type="text" name="descripcionImagen3" value="" placeholder="Descripcion" class="form-control">
+        <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any" name="imagen3" class="form-control">
+      </div>
+        <div class="form-group">
+        <input type="text" name="nombreImagen4" value="" placeholder="Nombre" class="form-control">
+        <input type="text" name="descripcionImagen4" value="" placeholder="Descripcion" class="form-control">
+        <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any" name="imagen4" class="form-control">
+      </div>
       </div>
 
       <div class="form-group">

@@ -22,23 +22,24 @@
   <div class="row">
    <div class="col s12">
      <ul class="tabs">
+     <li class="tab col s3"><a class="active" href="#ubi">Ubicación</a></li>
        <li class="tab col s3"><a href="#im">Imagenes</a></li>
        <li class="tab col s3"><a href="#des">Descripcion</a></li>
        <li class="tab col s3"><a href="#car">Características</a></li>
-       <li class="tab col s3"><a class="active" href="#ubi">Ubicación</a></li>
      </ul>
    </div>
  </div>
   <div class="container row">
-    <div id="des" class="col s12 container" style="display: none; height: 600px;">
-      <div class="container">
-        {{$proyecto -> descripcion}}
+    <div id="des" class="col s12 container" style="display: none; height: 600px; border-radius: 20px;">
+      <div class="container" style="pading: 200px;">
+        <h2 class="center">Descripción</h2>
+        <p class="center"><h4 class="grey-text darken-3">{{$proyecto -> descripcion}}</h4></p>
       </div>
     </div>
-    <div id="car" class="col s12 container" style="display: none; height: 600px;">
-      <div class="container">
+    <div id="car" class="col s12 container" style="display: none; height: 600px; border-radius: 20px;">
+      <div class="container" style="pading: 50px;">
         <h2 class="center">Características</h2>
-        <h4 class=""><?php echo $proyecto->caracteristicas?></h4>
+        <p><h4 class="center grey-text darken-4"><?php echo $proyecto->caracteristicas?></h4></p>
       </div>
     </div>
     <div id="ubi" class="col s12 container" style="display: inherit; height: 600px;">
@@ -51,8 +52,8 @@
           <li>
             <img src="{{asset('imgProyectos')}}/{{$in->ruta}}" width="100%"> <!-- random image -->
             <div class="caption center-align">
-              <h3>Esto le toca al gay del Arias</h3>
-              <h5 class="light grey-text text-lighten-3">{{$proyecto -> nombreProyecto}}</h5>
+              <h3>{{$in -> nombreImagen}} </h3>
+              <h5 class="light grey-text text-lighten-3">{{$in -> descripcionImagen}}</h5>
             </div>
           </li>
           @endforeach
@@ -83,7 +84,7 @@
       lat: lat,
       lng: lng
     },
-    zoom: 13
+    zoom: 15
   });
 
   var marker = new google.maps.Marker({

@@ -16,6 +16,7 @@ class CreateImagensTable extends Migration
             $table->increments('idImagen');
             $table->string('ruta');
             $table->string('nombreImagen');
+            $table->string('descripcionImagen');
             $table->integer('proyectoFk')->unsigned();
             $table->foreign('proyectoFk')->references('id')->on('proyecto_inmobiliarios')->onDelete('cascade');
             $table->timestamps();
