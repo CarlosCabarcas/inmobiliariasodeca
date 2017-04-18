@@ -158,18 +158,17 @@ class ProyectosController extends Controller
     public function update(Request $request, $id)
     {
         $proyect = ProyectoInmobiliario::findOrFail($id);
-
-        $img = $request->file('imagen-principal');
+        /*$img = $request->file('imagen-principal');
         $file_rout = time().'_'.$img->getClientOriginalName(); //metodo time() guarda la hora de unix
 
         storage::disk('imgProyectos')->put($file_rout, file_get_contents($img->getRealPath()));
-
+        */
         $request = array(
           'nombreProyecto' => $request->nombre,
           'tipoInmueble' => $request->categoria,
           'descripcion' => $request->descripcion,
           'caracteristicas' => $request->caracteristicas,
-          'imagen_principal' => $file_rout,
+          //'imagen_principal' => $file_rout,
           'latitud' => $request->lat,
           'longitud' => $request->lng
         );
