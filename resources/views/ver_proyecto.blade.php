@@ -20,6 +20,11 @@
   @include('layouts/navbar')
   <br><br>
   <div class="row">
+    <div class="center greytext lighteen-3">
+      <h1>{{$proyecto->nombreProyecto}}</h1>
+    </div>
+  </div>
+  <div class="row">
    <div class="col s12">
      <ul class="tabs">
      <li class="tab col s3"><a class="active" href="#ubi">Ubicación</a></li>

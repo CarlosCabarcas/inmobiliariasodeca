@@ -34,30 +34,6 @@
       </div>
 
       <div class="form-group">
-        <label for="imagen">Imagenes</label>
-        <div class="form-group">
-        <input type="text" name="nombreImagen1" value="" placeholder="Nombre" class="form-control">
-        <input type="text" name="descripcionImagen1" value="" placeholder="Descripcion" class="form-control">
-        <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any" name="imagen1" class="form-control">
-        </div>
-        <div class="form-group">
-        <input type="text" name="nombreImagen2" value="" placeholder="Nombre" class="form-control">
-        <input type="text" name="descripcionImagen2" value="" placeholder="Descripcion" class="form-control">
-        <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any" name="imagen2" class="form-control">
-      </div>
-        <div class="form-group">
-        <input type="text" name="nombreImagen3" value="" placeholder="Nombre" class="form-control">
-        <input type="text" name="descripcionImagen3" value="" placeholder="Descripcion" class="form-control">
-        <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any" name="imagen3" class="form-control">
-      </div>
-        <div class="form-group">
-        <input type="text" name="nombreImagen4" value="" placeholder="Nombre" class="form-control">
-        <input type="text" name="descripcionImagen4" value="" placeholder="Descripcion" class="form-control">
-        <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any" name="imagen4" class="form-control">
-      </div>
-      </div>
-
-      <div class="form-group">
         <label for="categoria">Tipo de Inmueble</label>
         <select class="form-control" name="categoria">
           <option value="">Seleccione un tipo de inmueble</option>
@@ -68,11 +44,8 @@
           <option value="Oficina">Oficina</option>
         </select>
       </div>
-
-      <div class="col-md-6 ">
-        <button type="submit" class="btn btn-success">Guardar</button>
-      </div>
     </div>
+
     <div class="col-md-6">
 
       <div class="form-group">
@@ -91,6 +64,85 @@
         <input type="text" name="lng" id="lng" class="form-control">
       </div>
 
+    </div>
+
+    <div class="row">
+      <div class="col-md-3 col-md-offset-4">
+        <h2>Imagenes:</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <div class="form-group">
+            <label for="nombreImagen1">Imagen 1</label>
+            <input type="text" name="nombreImagen1" value="" placeholder="Nombre" class="form-control">
+            <textarea type="text" name="descripcionImagen1" value="" placeholder="Descripcion" class="form-control"></textarea>
+            <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any" name="imagen1" class="form-control">
+            </div>
+          <div class="form-group">
+            <label for="nombreImagen2">Imagen 3</label>
+            <input type="text" name="nombreImagen2" value="" placeholder="Nombre" class="form-control">
+            <textarea type="text" name="descripcionImagen2" value="" placeholder="Descripcion" class="form-control"></textarea>
+            <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any" name="imagen2" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="nombreImagen3">Imagen 5</label>
+            <input type="text" name="nombreImagen3" value="" placeholder="Nombre" class="form-control">
+            <textarea type="text" name="descripcionImagen3" value="" placeholder="Descripcion" class="form-control"></textarea>
+            <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any" name="imagen3" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="nombreImagen4">Imagen 7</label>
+            <input type="text" name="nombreImagen4" value="" placeholder="Nombre" class="form-control">
+            <textarea type="text" name="descripcionImagen4" value="" placeholder="Descripcion" class="form-control"></textarea>
+            <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any" name="imagen4" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="nombreImagen5">Imagen 9</label>
+            <input type="text" name="nombreImagen5" value="" placeholder="Nombre" class="form-control">
+            <textarea type="text" name="descripcionImagen5" value="" placeholder="Descripcion" class="form-control"></textarea>
+            <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any" name="imagen5" class="form-control">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+          <div class="form-group">
+            <div class="form-group">
+              <label for="nombreImagen6">Imagen 2</label>
+              <input type="text" name="nombreImagen6" value="" placeholder="Nombre" class="form-control">
+              <textarea type="text" name="descripcionImagen6" value="" placeholder="Descripcion" class="form-control"></textarea>
+              <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any" name="imagen6" class="form-control">
+              </div>
+            <div class="form-group">
+              <label for="nombreImagen7">Imagen 4</label>
+              <input type="text" name="nombreImagen7" value="" placeholder="Nombre" class="form-control">
+              <textarea type="text" name="descripcionImagen7" value="" placeholder="Descripcion" class="form-control"></textarea>
+              <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any" name="imagen7" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="nombreImagen8">Imagen 6</label>
+              <input type="text" name="nombreImagen8" value="" placeholder="Nombre" class="form-control">
+              <textarea type="text" name="descripcionImagen8" value="" placeholder="Descripcion" class="form-control"></textarea>
+              <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any" name="imagen8" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="nombreImagen9">Imagen 8</label>
+              <input type="text" name="nombreImagen9" value="" placeholder="Nombre" class="form-control">
+              <textarea type="text" name="descripcionImagen9" value="" placeholder="Descripcion" class="form-control"></textarea>
+              <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any" name="imagen9" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="nombreImagen10">Imagen 10</label>
+              <input type="text" name="nombreImagen10" value="" placeholder="Nombre" class="form-control">
+              <textarea type="text" name="descripcionImagen10" value="" placeholder="Descripcion" class="form-control"></textarea>
+              <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any" name="imagen10" class="form-control">
+            </div>
+          </div>
+        </div>
+      <div class="col-md-6 ">
+        <button type="submit" class="btn btn-success">Guardar</button>
+      </div>
     </div>
 
     <!--script para manipular el mapa-->

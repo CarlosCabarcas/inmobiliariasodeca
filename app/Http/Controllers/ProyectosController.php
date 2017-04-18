@@ -101,6 +101,42 @@ class ProyectosController extends Controller
         $descripcion = 'descripcionImagen4';
         $this->guardarImagen($request, $proyecto->id, $imagen, $nombre, $descripcion);
       }
+      if($request->file('imagen5')){
+        $imagen = 'imagen5';
+        $nombre = 'nombreImagen5';
+        $descripcion = 'descripcionImagen5';
+        $this->guardarImagen($request, $proyecto->id, $imagen, $nombre, $descripcion);
+      }
+      if($request->file('imagen6')){
+        $imagen = 'imagen6';
+        $nombre = 'nombreImagen6';
+        $descripcion = 'descripcionImagen6';
+        $this->guardarImagen($request, $proyecto->id, $imagen, $nombre, $descripcion);
+      }
+      if($request->file('imagen7')){
+        $imagen = 'imagen7';
+        $nombre = 'nombreImagen7';
+        $descripcion = 'descripcionImagen7';
+        $this->guardarImagen($request, $proyecto->id, $imagen, $nombre, $descripcion);
+      }
+      if($request->file('imagen8')){
+        $imagen = 'imagen8';
+        $nombre = 'nombreImagen8';
+        $descripcion = 'descripcionImagen8';
+        $this->guardarImagen($request, $proyecto->id, $imagen, $nombre, $descripcion);
+      }
+      if($request->file('imagen9')){
+        $imagen = 'imagen9';
+        $nombre = 'nombreImagen9';
+        $descripcion = 'descripcionImagen9';
+        $this->guardarImagen($request, $proyecto->id, $imagen, $nombre, $descripcion);
+      }
+      if($request->file('imagen10')){
+        $imagen = 'imagen10';
+        $nombre = 'nombreImagen10';
+        $descripcion = 'descripcionImagen10';
+        $this->guardarImagen($request, $proyecto->id, $imagen, $nombre, $descripcion);
+      }
       //}
 
       return redirect()->route('listar_proyecto');

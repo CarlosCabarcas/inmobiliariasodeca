@@ -41,7 +41,7 @@ img
         <th>Tipo de inmueble</th>
         <th>Imagen principal</th>
         <th>Descripción</th>
-        <th>Controles</th>
+        <th colspan="2">Controles</th>
       </tr>
     </thead>
     <tbody>
@@ -54,6 +54,10 @@ img
         <td>
           <div class="btn-group btn-group-xs" role="group" aria-label="...">
             <a type="button" href="{{route('editar_proyecto', $proyect->id)}}" class="btn btn-success"><i class="fa fa-pencil-square-o" aria-hidden="true"> Editar</i></a>
+          </div>
+        </td>
+        <td>
+          <div>
             <a type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#eliminar" onclick="return confirmar('{{route('delete', $proyect->id)}}')"><i class="fa fa-trash-o" aria-hidden="true"> Eliminar</i></a>
           </div>
         </td>
