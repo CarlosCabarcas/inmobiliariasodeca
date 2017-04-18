@@ -33,13 +33,13 @@
     <div id="des" class="col s12 container" style="display: none; height: 600px; border-radius: 20px;">
       <div class="container" style="pading: 200px;">
         <h2 class="center">Descripción</h2>
-        <p class="center"><h4 class="grey-text darken-3">{{$proyecto -> descripcion}}</h4></p>
+        <font size=5>{{$proyecto -> descripcion}}</font>
       </div>
     </div>
     <div id="car" class="col s12 container" style="display: none; height: 600px; border-radius: 20px;">
       <div class="container" style="pading: 50px;">
         <h2 class="center">Características</h2>
-        <p><h4 class="center grey-text darken-4"><?php echo $proyecto->caracteristicas?></h4></p>
+        <p class="center"><font size=5><?php echo $proyecto->caracteristicas?></font></p>
       </div>
     </div>
     <div id="ubi" class="col s12 container" style="display: inherit; height: 600px;">
@@ -53,7 +53,7 @@
             <img src="{{asset('imgProyectos')}}/{{$in->ruta}}" width="100%"> <!-- random image -->
             <div class="caption center-align">
               <h3>{{$in -> nombreImagen}} </h3>
-              <h5 class="light grey-text text-lighten-3">{{$in -> descripcionImagen}}</h5>
+              <h5 class="grey-text text-lighten-3">{{$in -> descripcionImagen}}</h5>
             </div>
           </li>
           @endforeach

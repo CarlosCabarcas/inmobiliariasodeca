@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'ProyectosController@mostrar');
+Route::get('/', ['as' => 'inicio', 'uses' => 'ProyectosController@mostrar']);
 
 Route::get('/nosotros',function ()
 {
@@ -19,14 +19,6 @@ Route::get('/nosotros',function ()
 });
 
 Route::get('/ver_proyecto/{idproyecto}', 'ImagenController@index');
-
-
-Route::group(['middleware' => ['auth']], function() //guardo las rutas de administrador en un grupo de rutas y le asigno el middleware auth para que solo lo deje ingresar si esta ha iniciado sesión
-{
-Route::get('/inicio_admin',function ()
-{
-  return view('inicio_admin');
-});
 
 Route::get('/proyectos', 'ProyectosController@mostrar');
 
@@ -36,6 +28,14 @@ Route::get('/contacto',['as' => 'contact', function ()
 }]);
 
 Route::post('send', ['as' => 'enviar', 'uses' => 'MailController@send']);
+
+
+Route::group(['middleware' => ['auth']], function() //guardo las rutas de administrador en un grupo de rutas y le asigno el middleware auth para que solo lo deje ingresar si esta ha iniciado sesión
+{
+Route::get('/inicio_admin',function ()
+{
+  return view('inicio_admin');
+});
 
 //**********************************
 Route::get('/crear_proyecto', ['as' => 'create_proyecto', 'uses' => 'ProyectosController@index']);
