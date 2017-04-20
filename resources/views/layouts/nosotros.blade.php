@@ -2,7 +2,7 @@
     <div class="container">
         <h2 class="header text_b"> Sobre Nosotros</h2>
         <div class="row">
-          <div class="col s12 m6">
+          <div class="col s12 container">
             <div class="default_color white-text" style="padding: 20px">
               <h2>Misión</h2>
               <p class="white-text">
@@ -11,7 +11,9 @@
               </p>
             </div>
           </div>
-          <div class="col s12 m6">
+        </div>
+        <div class="row">
+          <div class="col s12 container">
             <div class="default_color white-text" style="padding: 20px">
               <h2>Visión</h2>
               <p class="white-text">
@@ -19,6 +21,7 @@
               </p>
             </div>
           </div>
+        </div>
             <div class="col s12 m12">
               <h4>Política de Calidad</h4>
               <p class="caption" align=justify>

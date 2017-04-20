@@ -11,7 +11,9 @@
 |
 */
 
-Route::get('/', ['as' => 'inicio', 'uses' => 'ProyectosController@mostrar']);
+Route::get('/', ['as' => 'inicio', 'uses' => 'ProyectosController@inicio']);
+
+Route::get('/sobre-nosotros.html', 'ProyectosController@sobrenosotros');
 
 Route::get('/nosotros',function ()
 {

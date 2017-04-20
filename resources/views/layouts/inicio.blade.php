@@ -1,31 +1,46 @@
 <div id="intro" class="section scrollspy">
-    <div class="container">
-        <div class="row">
-            <div  class="col s12">
-                <h2 class="center header text_h2"> Bienvenidos a inmobiliaria <span class="span_h2"> Sodeca</span></h2>
-            </div>
-
-            <div  class="col s12 m4 l4">
-                <div class="center promo promo-example">
-                    <i class="fa fa-home"></i>
-                    <h5 class="promo-caption">Sed ut perspiciatis</h5>
-                    <p class="light center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
-                </div>
-            </div>
-            <div class="col s12 m4 l4">
-                <div class="center promo promo-example">
-                    <i class="fa fa-heart"></i>
-                    <h5 class="promo-caption">Lorem ipsum dolor</h5>
-                    <p class="light center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                </div>
-            </div>
-            <div class="col s12 m4 l4">
-                <div class="center promo promo-example">
-                    <i class="fa fa-trash-o"></i>
-                    <h5 class="promo-caption">Li Europan lingues</h5>
-                    <p class="light center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
-                </div>
-            </div>
-        </div>
+  <div class="row">
+    <div  class="col s12">
+        <h2 class="center header text_h2"> Bienvenidos a constructora <span class="span_h2"> SODECA</span></h2>
     </div>
+  </div>
+
+  <div class="parallax-container">
+    <div class="slider">
+      <ul class="slides">
+        <li>
+          <img src="{{asset('img/slider-3.jpg')}}">
+        </li>
+        <li>
+          <img src="{{asset('img/slider-2.jpg')}}">
+        </li>
+        <li>
+          <img src="{{asset('img/slider-1.jpg')}}">
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section" style="background-color: #82c2cc !important;">
+    <div class="row container">
+      <h1 class="header white-text center">Sodeca Unión Ltda</h2>
+      <p class="white-text text-darken-3" style="font-size: 20px; font-weight: 300; margin-bottom: 30px;">SODECA UNIÓN LTDA ES UNA EMPRESA CONSTRUCTORA PROYECTADA A SER LA MEJOR DE LA REGIÓN. COMPRAMOS LOTES, VENDEMOS CASAS Y APARTAMENTOS EN LA CIUDAD DE MONTERÍA, CÓRDOBA CON GARANTÍA DE CALIDAD CERTIFICADA.</p>
+    </div>
+  </div>
+
+  <div class="parallax-container">
+    <div class="slider">
+        <ul class="slides">
+          <li>
+            <img src="{{asset('img/slider-1.jpg')}}">
+          </li>
+          <li>
+            <img src="{{asset('img/slider-3.jpg')}}">
+          </li>
+          <li>
+            <img src="{{asset('img/slider-2.jpg')}}">
+          </li>
+        </ul>
+    </div>
+  </div>
 </div>

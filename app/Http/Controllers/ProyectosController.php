@@ -24,6 +24,16 @@ class ProyectosController extends Controller
         return view('crear_proyecto');
     }
 
+    public function inicio()
+    {
+      return view('index');
+    }
+
+    public function sobrenosotros()
+    {
+      return redirect('nosotros');
+    }
+
     public function listarProyectos(){
       $proyectos = ProyectoInmobiliario::paginate(3);
 

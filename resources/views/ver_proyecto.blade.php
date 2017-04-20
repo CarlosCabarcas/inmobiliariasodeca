@@ -25,14 +25,14 @@
     </div>
   </div>
   <div class="row">
-   <div class="col s12">
+
      <ul class="tabs">
-     <li class="tab col s3"><a class="active" href="#ubi">Ubicación</a></li>
-       <li class="tab col s3"><a href="#im">Imagenes</a></li>
-       <li class="tab col s3"><a href="#des">Descripcion</a></li>
-       <li class="tab col s3"><a href="#car">Características</a></li>
+       <li class="tab col s3" style="overflow: hidden;"><a class="active" href="#ubi">Ubicación</a></li>
+       <li class="tab col s3" style="overflow: hidden;"><a href="#im">Imágenes</a></li>
+       <li class="tab col s3" style="overflow: hidden;"><a href="#des">Descripción</a></li>
+       <li class="tab col s3" style="overflow: hidden;"><a href="#car">Características</a></li>
      </ul>
-   </div>
+
  </div>
   <div class="container row">
     <div id="des" class="col s12 container" style="display: none; height: 600px; border-radius: 20px;">

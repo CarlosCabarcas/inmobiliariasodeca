@@ -1,0 +1,14 @@
+{
+  "transport": "ftp",
+  "uploadOnSave": true,
+  "useAtomicWrites": false,
+  "deleteLocal": false,
+  "hostname": "ftp.sodecaunionltda.com",
+  "ignore": [
+    ".remote-sync.json",
+    ".git/**"
+  ],
+  "username": "sodeca",
+  "password": "sTN3JpWnMZ7rxKc",
+  "watch": []
+}

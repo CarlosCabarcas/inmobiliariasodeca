@@ -34,16 +34,10 @@
                 </form>
             </div>
 
-            <div class="col l3 s12 offset-l3">
-                <h5 class="white-text">Social</h5>
-                <ul>
-                        <a class="white-text" target="_blank" href="https://www.facebook.com/sodecaunionltda/">
-                            <i class="small fa fa-facebook-square white-text"></i> Facebook
-                        </a>
-                    </li>
-                </ul>
+            <div class="col l5 s12 offset-l1">
+              <p class="white-text"><strong> Teléfonos: 7811801 - 3135681843 - 3135682500 </strong></p>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1971.6762991688458!2d-75.89061840309876!3d8.752856398160967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e5a2ffb2273fa03%3A0x29813c858ba5870e!2sSodeca!5e0!3m2!1ses!2sus!4v1492650189444" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
-        </div>
     </div>
     <div class="footer-copyright default_color">
         <div class="container">

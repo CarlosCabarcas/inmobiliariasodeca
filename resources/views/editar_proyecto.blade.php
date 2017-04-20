@@ -25,7 +25,7 @@
 
       <div class="form-group">
         <label for="caracteristicas">Características</label>
-        <textarea rows="3" class="form-control"  name="caracteristicas" placeholder="Características del proyecto">{{$edit->caracteristicas}}</textarea>
+        <textarea rows="3" class="form-control"  name="caracteristicas" placeholder="Características del proyecto"><?php echo str_replace('<br />','',$edit->caracteristicas) ?></textarea>
       </div>
       <!--<div class="form-group">
         <label for="imagen">Imagenes</label>

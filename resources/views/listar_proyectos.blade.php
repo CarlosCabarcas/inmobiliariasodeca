@@ -12,7 +12,7 @@
     <div class="modal-content">
       <div class="modal-header cabecera">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Mensaje de Sodeca</h4>
+        <h4 class="modal-title" id="myModalLabel">Mensaje de Sodeca Unión Ltda</h4>
       </div>
       <div class="modal-body">
         <p class="text-justify"><strong>¿Esta seguro que desea eliminar este Proyecto?.<br></strong></p>
@@ -49,7 +49,7 @@ img
       <tr>
         <td>{{$proyect->nombreProyecto}}</td>
         <td>{{$proyect->tipoInmueble}}</td>
-        <td><img src="imgProyectos/{{$proyect->imagen_principal	}}" class="zoom" height="50px" width="70px"></td>
+        <td><img src="{{asset('imgProyectos')}}/{{$proyect->imagen_principal	}}" class="zoom" height="50px" width="70px"></td>
         <td>{{$proyect->descripcion}}</td>
         <td>
           <div class="btn-group btn-group-xs" role="group" aria-label="...">
